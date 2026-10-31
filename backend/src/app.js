@@ -1,3 +1,4 @@
+
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
@@ -29,34 +30,16 @@ app.get('/api/health', (req, res) => {
   })
 })
 
-/*
- * Routes
- *
- * Keep the existing route files from your project.
- * These are loaded only when the corresponding files exist.
- */
+// Routes
+const authRoutes = require('./routes/authRoutes')
+const memberRoutes = require('./routes/memberRoutes')
+const shgRoutes = require('./routes/shgRoutes')
 
-try {
-  const authRoutes = require('./src/routes/authRoutes')
-  app.use('/api/auth', authRoutes)
-} catch (error) {
-  console.log('Auth routes not loaded:', error.message)
-}
+app.use('/api/auth', authRoutes)
+app.use('/api/members', memberRoutes)
+app.use('/api/shg', shgRoutes)
 
-try {
-  const memberRoutes = require('./src/routes/memberRoutes')
-  app.use('/api/members', memberRoutes)
-} catch (error) {
-  console.log('Member routes not loaded:', error.message)
-}
-
-try {
-  const shgRoutes = require('./src/routes/shgRoutes')
-  app.use('/api/shg', shgRoutes)
-} catch (error) {
-  console.log('SHG routes not loaded:', error.message)
-}
-
+// Error handler
 app.use((err, req, res, next) => {
   console.error(err)
 
@@ -66,6 +49,7 @@ app.use((err, req, res, next) => {
   })
 })
 
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({
     success: false,
