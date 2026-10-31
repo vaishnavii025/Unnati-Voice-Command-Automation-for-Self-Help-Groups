@@ -1,63 +1,48 @@
 # Unnati – Voice Command Automation for Self-Help Groups
 
+**A web-based Self-Help Group Management System with voice-command automation to simplify group and financial management.**
+
 ## About the Project
 
-**Unnati** is a Voice Command Automation System designed to simplify financial and administrative activities for Self-Help Groups (SHGs). It helps users manage SHG-related operations through a user-friendly web application with voice-command functionality.
+Unnati is a web application designed to support Self-Help Groups (SHGs) in managing their members and financial activities. It aims to make routine management tasks easier through a user-friendly interface and voice-command functionality.
 
-The system aims to make SHG management more accessible, efficient, and convenient.
+## Key Features
 
-## Features
-
-- **Voice Command Automation:** Perform supported operations using voice commands.
-- **Member Management:** Manage Self-Help Group member information.
-- **Savings Management:** Maintain savings-related records.
-- **Loan Management:** Manage loan-related information.
-- **Payment Management:** Support financial transaction management.
-- **User Authentication:** Provide user login and authentication.
-- **Multilingual Support:** Includes English, Hindi, and Marathi language resources.
-- **Dashboard:** Access management features through the web interface.
+- **SHG Management:** Manage Self-Help Group information.
+- **Member Management:** Maintain member details and group records.
+- **Savings Management:** Record and track member savings.
+- **Loan Management:** Manage loan records and repayment information.
+- **Voice Command Automation:** Support voice-based interaction for SHG management tasks.
+- **Financial Records:** Maintain organized financial transaction information.
+- **Multilingual Interface:** Language support for English, Hindi and Marathi.
 
 ## Technologies Used
 
-### Frontend
-- React.js
-- Vite
-- JavaScript
-- HTML
-- CSS
-
-### Backend
-- Node.js
-- Express.js
-- REST APIs
-
-### Database
-- MongoDB
-- Mongoose
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, JavaScript, HTML, CSS |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| API | REST APIs |
+| Development Tools | Visual Studio Code, Git, GitHub |
 
 ## Project Structure
 
 ```text
 Unnati/
-│
 ├── backend/
-│   ├── controllers/
-│   ├── routes/
-│   ├── models/
-│   ├── uploads/
-│   └── ...
-│
+│   ├── src/
+│   ├── package.json
+│   └── server.js
 ├── frontend/
 │   ├── src/
-│   ├── public/
-│   └── ...
-│
+│   └── package.json
+├── README.md
 ├── package.json
-├── package-lock.json
-└── README.md
+└── .gitignore
 ```
 
-## Installation and Setup
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -65,46 +50,43 @@ Unnati/
 git clone https://github.com/vaishnavii025/Unnati-Voice-Command-Automation-for-Self-Help-Groups.git
 ```
 
-### 2. Open the Project Folder
-
-```bash
-cd Unnati-Voice-Command-Automation-for-Self-Help-Groups
-```
-
-### 3. Install Dependencies
-
-Install the backend and frontend dependencies separately:
+### 2. Install Backend Dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
+### 3. Install Frontend Dependencies
+
+Open another terminal:
+
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
 ### 4. Configure Environment Variables
 
-Create a `.env` file in the backend folder and configure the required environment variables.
+Create a `.env` file in the backend directory and configure the required database connection and application settings.
 
-Do not upload your actual `.env` file or secret keys to GitHub.
+Never upload your `.env` file or API keys to GitHub.
 
 ### 5. Run the Application
 
-Start the backend and frontend using the development scripts defined in their respective `package.json` files.
+Start the backend and frontend using the development commands configured in their respective `package.json` files.
 
 ## Project Purpose
 
-Unnati aims to support Self-Help Groups by simplifying financial record management and making digital services easier to access through voice-based interaction.
+The project focuses on simplifying Self-Help Group administration and financial record management through web technologies and voice-command automation.
 
-## Author
+## Developer
 
 **Vaishnavi Sontakke**
 
-B.Tech – Computer Science and Engineering
+- GitHub: https://github.com/vaishnavii025
+- LinkedIn: https://linkedin.com/in/vaishnavi-sontakke-320419427
 
-GitHub: [vaishnavii025](https://github.com/vaishnavii025)
+---
 
-Project Repository: [Unnati – Voice Command Automation for Self-Help Groups](https://github.com/vaishnavii025/Unnati-Voice-Command-Automation-for-Self-Help-Groups)
+*Developed as an academic project using React.js, Node.js, Express.js and MongoDB.*
